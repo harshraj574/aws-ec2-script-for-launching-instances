@@ -1,22 +1,22 @@
 #!/bin/bash
 
 # update the ubuntu machine
-sudo apt update
+sudo apt update -y
 
 # Install NodeJS in the machine
-sudo apt install nodejs
+sudo apt install nodejs -y
 
 # Install npm in the machine
-sudo apt install npm
+sudo apt install npm -y
 
 #clone the repository
-git clone https://github.com/harshraj574/AWS-Demo-Project.git
+git clone https://github.com/harshraj574/AWS-Demo-Project.git /home/ubuntu/project
 
 # cd in the folder
-cd AWS-Demo-Project
+cd /home/ubuntu/project
 
 # install packages
-npm install
+sudo npm install
 
 ## turn up the server
-npx pm2 start index.js
+sudo npx pm2 start index.js
